@@ -32,10 +32,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "node_modules")));
 
+//welcomes
 //Using the routess
 app.use("/", indexRouter);
 app.use("/incoming-list", incomingRouter);
-app.use("/analyze-list", analyzeRouter);
+app.use("/api/analyze-list", analyzeRouter);
 //API
 app.use("/api/patient-list", contactRouter);
 
