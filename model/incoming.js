@@ -9,11 +9,10 @@ let mySchema = mongoose.Schema(
     typeOfAbuse: String,
     isAgressive: String,
     recommendedPhrases: String,
-
     personalRedirection: String,
     successRating: Number,
     dateTime: String,
-    Comments: String
+    comments: String
   },
   {
     //collection

@@ -1,11 +1,10 @@
 incomingModel = require("../model/incoming");
-analyzeMoe = require("../model/analyze");
+analyzeMod = require("../model/analyze");
 
 //Find - GET
 //Update - PUT
 //Create - POST
 //Remove - DELETE
-//welcomes
 
 module.exports.displayinfo = (req, res, next) => {
   incomingModel.find((err, val) => {
@@ -36,19 +35,37 @@ module.exports.processinfo = (req, res, next) => {
 
   let object = new incomingModel({
     //get FROM BODY
-    caregiver: req.body.caregiver,
+
     patient: req.body.patient,
+    caregiver: req.body.caregiver,
     typeOfCare: req.body.typeOfCare,
     typeOfAbuse: req.body.typeOfAbuse,
     isAgressive: req.body.isAgressive,
     recommendedPhrases: req.body.recommendedPhrases,
     personalRedirection: req.body.personalRedirection,
     successRating: req.body.successRating,
+    dateTime: req.body.dateTime,
     comments: req.body.comments
   });
 
+  let object1 = new analyzeMod({
+    recommendedPhrases: req.body.recommendedPhrases,
+    personalRedirection: req.body.personalRedirection,
+    patientID: object._id,
+    behaviour: req.body.typeOfAbuse,
+    score: 50
+  });
+
+  analyzeMod.create(object1, (err, analyze) => {
+    if (err) {
+      res.end(err);
+    } else {
+      console.log(analyze);
+    }
+  });
+
   //create
-  incomingModel.create(object, (err, contactModel) => {
+  incomingModel.create(object, (err, incomingModel) => {
     if (err) {
       console.log(err);
       //goes to the browser as well
@@ -82,17 +99,18 @@ module.exports.processedit = (req, res, next) => {
 
   let object = new incomingModel({
     //get FROM BODY
-    caregiver: req.body.caregiver,
+    _id: id,
     patient: req.body.patient,
+    caregiver: req.body.caregiver,
     typeOfCare: req.body.typeOfCare,
     typeOfAbuse: req.body.typeOfAbuse,
     isAgressive: req.body.isAgressive,
     recommendedPhrases: req.body.recommendedPhrases,
     personalRedirection: req.body.personalRedirection,
     successRating: req.body.successRating,
+    dateTime: req.body.dateTime,
     comments: req.body.comments
   });
-
   //Get the ID
   incomingModel.update({ _id: id }, object, err => {
     if (err) {
