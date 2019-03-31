@@ -5,6 +5,7 @@ analyzeMoe = require("../model/analyze");
 //Update - PUT
 //Create - POST
 //Remove - DELETE
+//welcome
 
 module.exports.displayinfo = (req, res, next) => {
   incomingModel.find((err, val) => {
