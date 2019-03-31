@@ -1,1 +1,32 @@
 /* custom css goes here */
+
+.container {
+  width: 100%;
+  float: left;
+  margin-left: 10px;
+}
+.bLogTitle {
+  text-shadow: black 1px 1px;
+}
+.bLogButton,
+.bLogTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.bLogButton {
+  padding: 10px;
+}
+.navitems {
+  font-size: 20px;
+  margin-right: 10%;
+}
+
+.fullTitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+.navbar {
+  background-color: #50b4c8;
+}
