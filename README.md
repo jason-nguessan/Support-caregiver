@@ -34,15 +34,15 @@ POST: api/analyze-list/add
 PUT: api/analyze-list/edit/ID
 
 
-<h6>Credits: 
+<h6>Credits:
+</br>
+Ethienni Martins - Project Manager: https://www.linkedin.com/in/ethienni/
 </br>
 Jason N'Guessan - Full Stack Developer Spc. Back-end: https://www.linkedin.com/in/jasonguessan/
 </br>
 Mark Wong - Front-End Developer & Tester: <a href = "https://www.linkedin.com/in/markwong167/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAB8OMxQBFBcRqjm1KouHZE3Y_VMtzR0Ic5s">Mark Wong</a>
 </br>
 Marvin Jupiter Vargas - Front-End Developer: https://www.linkedin.com/in/marvinjupitervargas/
-</br>
-Ethienni Martins - Project Manager: https://www.linkedin.com/in/ethienni/
 </br>
 Kashtin Fitzismons - Product Manager: https://www.linkedin.com/in/kashtin-fitzsimons-11922876/
 </br>
